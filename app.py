@@ -12,14 +12,16 @@ import pandas as pd
 import joblib
 import re
 import nltk
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Download required NLTK data
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
+
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Load models
 lda_model = joblib.load("lda_topic_model.pkl")
